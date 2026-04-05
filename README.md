@@ -1,15 +1,18 @@
 # MedicoForm AI
 
 
-Solução inteligente para estruturação de prontuários médicos utilizando IA.
+MedicoForm AI
 
-Através de **Prompt Engineering** o programa é estruturado para garantir que um modelo de LLM (nesse caso foi usado o modelo `gemini-2.5-flash`) retorne dados clínicos precisos em formato JSON. O prompt define um papel de assistente médico e impõe um esquema de saída rigoroso, validado pelo **Pydantic** no backend.
+Uma solução inteligente e resiliente para a estruturação de prontuários médicos utilizando Inteligência Artificial Generativa.
+
+O **MedicoForm AI** utiliza técnicas avançadas de **Prompt Engineering** e **Structured Outputs** para garantir que modelos de linguagem (LLM) — nesse caso, o `gemini-2.5-flash` — transformem descrições clínicas de texto livre em objetos JSON precisos. A solução conta com um papel de assistente especializado e um esquema de saída rigoroso, validado via **Pydantic** no backend para garantir integridade dos dados.
 
 ## Como Executar
 
-Após baixar/clonar o projeto são necessários apenas dois passos
+O projeto foi desenhado para um setup simplificado. Após clonar o repositório, siga os passos abaixo:
 
-1. **Configuração da Chave de API:** Renomeie `backend/.env.example` para `backend/.env` e insira sua API Key, no caso desse projeto foi utilizado uma API do Gemini [você pode obter uma gratuitamente clicando aqui](https://aistudio.google.com/app/apikey).
+1. **Configuração da Chave de API:** No diretório `backend/.env`, insira sua chave do Google Gemini. 
+   > [Obtenha uma chave gratuita aqui](https://aistudio.google.com/app/apikey)
 
 2.  **Iniciar o projeto** Na raiz do projeto, execute:
 
