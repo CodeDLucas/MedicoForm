@@ -5,19 +5,19 @@ const api = axios.create({
 });
 
 export interface MedicalInput {
-  queixa_principal: string;
-  hipotese_diagnostica: string;
-  conduta: string;
+  relato_clinico: string;
 }
 
 export interface MedicalAnalysis {
   resumo_clinico: string;
-  diagnosticos: string[];
-  condutas: string[];
+  diagnosticos_identificados: string[];
+  sugestoes_ia: string[];
+  condutas_identificadas: string[];
+  sugestoes_conduta: string[];
 }
 
 export const analyzeCase = async (data: MedicalInput): Promise<MedicalAnalysis> => {
-  const response = await api.post<MedicalAnalysis>('/analyze', data);
+  const response = await api.post('/analyze', data);
   return response.data;
 };
 
